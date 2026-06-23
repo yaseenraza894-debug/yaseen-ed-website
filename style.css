@@ -92,7 +92,7 @@ linear-gradient(
 rgba(0,0,0,.55),
 rgba(0,0,0,.55)
 ),
-url("mandap.jpg");
+url("whitemandap3.jpg");
 
 background-size:cover;
 background-position:center;
@@ -117,11 +117,12 @@ margin-bottom:20px;
 font-size:100px;
 line-height:1;
 margin-bottom:10px;
+color:#1E90FF;
 }
 
 .hero-content h2{
 font-size:70px;
-color:#d4af37;
+color:#B8860B
 font-family:cursive;
 margin-bottom:25px;
 }
@@ -357,10 +358,16 @@ font-size:18px;
 
 /* MOBILE */
 
-@media(max-width:992px){
+@media(max-width:768px){
+
+body{
+background:#ffffff;
+color:#000000;
+}
 
 header{
-padding:0 20px;
+padding:0 15px;
+background:#ffffff;
 }
 
 nav{
@@ -368,69 +375,91 @@ display:none;
 }
 
 .hero{
-padding:30px;
+height:75vh;
+padding:20px;
+background-position:center center;
+}
+
+.hero-content{
+max-width:100%;
+}
+
+.hero-content h4{
+font-size:16px;
 }
 
 .hero-content h1{
-font-size:60px;
+font-size:42px;
+color:#000000;
 }
 
 .hero-content h2{
-font-size:45px;
+font-size:30px;
+color:#d4af37;
+font-family:"Brush Script MT", cursive;
 }
 
 .hero-content p{
-font-size:18px;
+font-size:16px;
+line-height:1.5;
+color:#000000;
+}
+
+.hero-buttons{
+flex-wrap:wrap;
 }
 
 .features{
-grid-template-columns:1fr 1fr;
+grid-template-columns:repeat(2,1fr);
+padding:40px 15px;
+gap:15px;
+background:#ffffff;
 }
 
-.service-grid{
-grid-template-columns:1fr 1fr;
+.feature-box{
+padding:20px 10px;
+background:#ffffff;
 }
 
-.gallery-grid{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:768px){
-
-.features{
-grid-template-columns:1fr;
-}
-
-.service-grid{
-grid-template-columns:1fr;
-}
-
-.gallery-grid{
-grid-template-columns:1fr;
-}
-
-.hero-content h1{
-font-size:45px;
-}
-
-.hero-content h2{
-font-size:35px;
-}
-
-.logo-text h2{
-font-size:24px;
-}
-
-.logo-circle{
-width:55px;
-height:55px;
-font-size:28px;
+.feature-box p{
+font-size:14px;
+line-height:1.4;
 }
 
 .section{
-padding:70px 20px;
+padding:50px 15px;
+background:#ffffff;
+}
+
+.section p{
+color:#000000;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.logo-text h2{
+font-size:22px;
+}
+
+.logo-text p{
+color:#000000;
+}
+
+.logo-circle{
+width:50px;
+height:50px;
+font-size:25px;
+}
+
+footer{
+background:#ffffff;
+color:#000000;
 }
 
 }
