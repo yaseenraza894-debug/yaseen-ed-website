@@ -3,257 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YASEEN ED EVENT DECORATION</title>
-
+<title>Yaseen ED Event Decoration</title>
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
-
 <body>
 
-<!-- HEADER -->
-
 <header>
+    <div class="logo">
+        <h2>YASEEN ED</h2>
+        <p>EVENT DECORATION</p>
+    </div>
 
-<div class="logo">
+    <nav id="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
 
-<div class="logo-circle">
-Y
-</div>
-
-<div class="logo-text">
-<h2>YASEEN ED</h2>
-<p>EVENT DECORATION</p>
-</div>
-
-</div>
-
-<nav>
-
-<ul>
-
-<li><a class="active" href="#">Home</a></li>
-
-<li><a href="#about">About Us</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#gallery">Gallery</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-</nav>
-
-<div class="menu-btn">
-<i class="fa-solid fa-bars"></i>
-</div>
-
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
 </header>
 
-<!-- HERO SECTION -->
-
 <section class="hero">
+    <div class="overlay">
+        <h4>MAKE YOUR MOMENTS UNFORGETTABLE</h4>
+        <h1>YASEEN ED</h1>
+        <h2>Event Decoration</h2>
 
-<div class="overlay"></div>
+        <p>
+            We decorate your dreams with creativity & elegance.
+            Weddings, Engagements, Birthdays, Receptions & More.
+        </p>
 
-<div class="hero-content">
-
-<h4>
-MAKE YOUR MOMENTS UNFORGETTABLE
-</h4>
-
-<h1>
-YASEEN ED
-</h1>
-
-<h2>
-Event Decoration
-</h2>
-
-<div class="line"></div>
-
-<p>
-We decorate your dreams with creativity & elegance.
-</p>
-
-<p>
-Weddings, Engagements, Birthdays,
-Receptions & More.
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="btn gold-btn">
-OUR SERVICES
-</a>
-
-<a href="#" class="btn border-btn">
-CONTACT US
-</a>
-
-</div>
-
-</div>
-
+        <div class="buttons">
+            <a href="#" class="btn gold">OUR SERVICES</a>
+            <a href="#" class="btn">CONTACT US</a>
+        </div>
+    </div>
 </section>
-
-<!-- WAVE SECTION -->
-
-<div class="wave">
-<svg viewBox="0 0 1440 200">
-
-<path fill="#ffffff"
-d="M0,96L60,112C120,128,240,160,360,154.7C480,149,600,107,720,101.3C840,96,960,128,1080,138.7C1200,149,1320,139,1380,133.3L1440,128L1440,320L0,320Z">
-</path>
-
-</svg>
-</div>
-
-<!-- FEATURES -->
 
 <section class="features">
 
-<div class="feature-box">
-
-<i class="fa-regular fa-gem"></i>
-
+<div class="box">
+<i class="fas fa-gem"></i>
 <h3>PREMIUM QUALITY</h3>
-
-<p>
-High quality decor with perfect execution.
-</p>
-
+<p>High quality decor with perfect execution.</p>
 </div>
 
-<div class="feature-box">
-
-<i class="fa-solid fa-users"></i>
-
+<div class="box">
+<i class="fas fa-users"></i>
 <h3>EXPERT TEAM</h3>
-
-<p>
-Professional team with creative ideas.
-</p>
-
+<p>Professional team with creative ideas.</p>
 </div>
 
-<div class="feature-box">
-
-<i class="fa-regular fa-star"></i>
-
+<div class="box">
+<i class="fas fa-star"></i>
 <h3>CUSTOM DESIGN</h3>
-
-<p>
-Customized themes as per your choice.
-</p>
-
+<p>Customized themes as per your choice.</p>
 </div>
 
-<div class="feature-box">
-
-<i class="fa-regular fa-clock"></i>
-
+<div class="box">
+<i class="fas fa-clock"></i>
 <h3>ON TIME DELIVERY</h3>
+<p>We value your time & commitment.</p>
+</div>
+
+</section>
+
+<script src="script.js"></script>
+<section class="page-banner">
+<h1>About Us</h1>
+</section>
+
+<section class="about">
+<div class="about-text">
+<h2>Yaseen ED Event Decoration</h2>
 
 <p>
-We value your time & commitment.
+We specialize in wedding decoration,
+engagement decoration, birthday decoration,
+reception setups and luxury event designs.
+
+<p>
+Our mission is to transform every event
+into a memorable experience through creativity,
+quality and elegance.
 </p>
 
 </div>
-
+</section>
+<section class="page-banner">
+<h1>Our Services</h1>
 </section>
 
-<!-- ABOUT -->
+<section class="services">
 
-<section id="about" class="section">
+<div class="service-card">
+<h3>Wedding Decoration</h3>
+<p>Luxury wedding stage and venue decoration.</p>
+</div>
 
-<h2>About Us</h2>
+<div class="service-card">
+<h3>Engagement Decoration</h3>
+<p>Beautiful engagement themes and floral setups.</p>
+</div>
 
-<p>
+<div class="service-card">
+<h3>Birthday Decoration</h3>
+<p>Customized birthday event decoration.</p>
+</div>
 
-YASEEN ED Event Decoration specializes in
-Wedding Decoration, Engagement Decoration,
-Birthday Events, Reception Events and
-Luxury Stage Decoration.
-
-</p>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services" class="section">
-
-<h2>Our Services</h2>
-
-<div class="service-grid">
-
-<div>Wedding Decoration</div>
-
-<div>Birthday Decoration</div>
-
-<div>Reception Decoration</div>
-
-<div>Engagement Decoration</div>
-
-<div>Stage Decoration</div>
-
-<div>Flower Decoration</div>
-
+<div class="service-card">
+<h3>Reception Decoration</h3>
+<p>Elegant reception stage and entrance decor.</p>
 </div>
 
 </section>
-
-<!-- GALLERY -->
-
-<section id="gallery" class="section">
-
-<h2>Gallery</h2>
-
-<div class="gallery-grid">
-
-<img src="Stage1.jpg">
-
-<img src="Stage2.jpg">
-
-<img src="Stage3.jpg">
-
-<img src="Stage4.jpg">
-
-<img src="Stage5.jpg">
-
-<img src="Stage6.jpg">
-
-
-</div>
-
+<section class="page-banner">
+<h1>Gallery</h1>
 </section>
 
-<!-- CONTACT -->
+<section class="gallery">
 
-<section id="contact" class="section">
+<img src="stage1(1).jpg">
+<img src="stage1(2).jpg">
+<img src="stage1(3).jpg">
+<img src="stage1(4.jpg">
+<img src="stage1.png">
 
-<h2>Contact Us</h2>
+</section>
+<section class="page-banner">
+<h1>Contact Us</h1>
+</section>
+
+<section class="contact">
 
 <form>
 
-<input type="text"
-placeholder="Your Name">
+<input type="text" placeholder="Your Name">
 
-<input type="email"
-placeholder="Your Email">
+<input type="tel" placeholder="Phone Number">
 
-<input type="text"
-placeholder="Mobile Number">
+<input type="email" placeholder="Email">
 
-<textarea
-placeholder="Message">
-</textarea>
+<textarea placeholder="Message"></textarea>
 
 <button type="submit">
 Send Message
@@ -262,25 +160,10 @@ Send Message
 </form>
 
 </section>
-
-<!-- WHATSAPP -->
-
-<a href="https://wa.me/9685052842"
-class="whatsapp">
-
-<i class="fa-brands fa-whatsapp"></i>
-
+<a href="https://wa.me/91XXXXXXXXXX"
+class="whatsapp-btn"
+target="_blank">
+💬
 </a>
-
-<footer>
-
-<p>
-© 2026 YASEEN ED EVENT DECORATION
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
 </body>
 </html>
