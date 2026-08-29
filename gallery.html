@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery | Yaseen Ed</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; } 
+        .serif-font { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F6] text-[#2C2C2C]">
+
+     <!-- Navigation Bar -->
+   <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="serif-font text-2xl font-bold tracking-widest text-[#B59410]">
+            YASEEN ED
+        </a>
+<a href="contact.html"
+           class="bg-[#B59410] text-white px-5 py-2.5 rounded text-sm uppercase tracking-wider font-semibold hover:bg-[#94780D] transition">
+            Book Now
+        </a>
+		</div>
+       <div class="flex overflow-x-auto whitespace-nowrap gap-6 text-sm font-medium tracking-wider uppercase no-scrollbar">
+
+    <a href="index.html"
+       class="hover:text-[#B59410] transition">
+        Home
+    </a>
+
+    <a href="about.html"
+       class="hover:text-[#B59410] transition">
+        About
+    </a>
+
+    <a href="services.html"
+       class="hover:text-[#B59410] transition">
+        Services
+    </a>
+
+  <a href="gallery.html"
+   class="text-[#B59410] font-semibold">
+    Gallery
+</a>
+
+    <a href="contact.html"
+       class="hover:text-[#B59410] transition">
+        Contact
+    </a>
+
+</div>
+</nav>
+
+    <!-- Filter Buttons -->
+    <section class="max-w-7xl mx-auto px-6 pt-16 text-center">
+        <h1 class="serif-font text-4xl font-bold mb-3">Our Visual Canvas</h1>
+        <p class="text-xs text-gray-500 uppercase tracking-widest mb-8">Touch any image to view full screen and download</p>
+        
+        <div class="flex justify-start md:justify-center gap-3 mb-12 overflow-x-auto whitespace-nowrap px-2 filter-menu">
+            <button onclick="filterGallery('all', this)" class="gallery-btn bg-[#B59410] text-white px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer transition">All</button>
+            <button onclick="filterGallery('wedding', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">Weddings</button>
+            <button onclick="filterGallery('haldi', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">Haldi</button>
+			 <button onclick="filterGallery('welcome-gate', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">welcome gate</button>
+ <button onclick="filterGallery('wedding-hall', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">wedding hall</button>
+       
+		 <button onclick="filterGallery('mandap', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">mandap</button>
+        
+		<button onclick="filterGallery('other', this)" class="gallery-btn bg-white border border-gray-200 px-5 py-2 rounded text-xs uppercase font-semibold tracking-wider cursor-pointer hover:border-gray-400 transition">other</button>
+        </div>
+        <!-- Gallery Grid (Badi Matrix) -->
+        <div class="columns-1 md:columns-3 gap-6 space-y-6 mb-20" id="gallery-grid">
+            <!-- Image 1 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="stage02.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+            <!-- Image 2 - Haldi -->
+            <div class="item haldi overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="haldi.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Traditional Yellow Haldi Theme">
+            </div>
+            <!-- Image 3 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="stage01.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Luxury Entry Pathway">
+            </div>
+            <!-- Image 4 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_000000003ed071f88b2a7b101d48665c.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Floral Stage Design">
+            </div>
+            <!-- Image 5 - Haldi -->
+            <div class="item haldi overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000b1d471fd83032d9c3aabeb80.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Marigold Yellow Hanging Setup">
+            </div>
+            <!-- Image 6 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="grandstage.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Premium Cinematic Lighting Setup">
+            </div
+		 <!-- Image 7 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src=".trashed-1785165398-file_0000000057a471fa9596e4c98b032bed.png" class="w-full h-(320px) object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 8 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000e5287207a8305568505af936.png" class="w-full h-(320px) object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+				 
+			
+			
+			
+			 <!-- Image 1 - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000168c71f8b59be8c38478ea24.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+ <!-- Image 2 - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="welcome gate.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 3 - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000b1f471fa96db7b0eb91c5920.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 4 - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000f738720b8556dd0c527c8267.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 5 - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_0000000050e471fa9f8ac009603be7a8.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 6  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_0000000064a47206b75c3a5a54a19b3d.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 7  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000880c71fd960a3b671146c3f5.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 8  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000410871fa8b31435916e8add2.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 9  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000559471fd80f6b27eb4cffccb.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 10  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000419072069a25a4dfafe31bf7.png" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 11  - welcome gate-->
+            <div class="item welcome-gate overfluow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="IMG_20250228_161153.jpg" class="w-fll h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+			
+			 <!-- Image 1 - Wedding-hall -->
+            <div class="item wedding-hall overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="IMG-20260513-WA0001.jpg" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 2 - Wedding-hall -->
+            <div class="item wedding-hall overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="IMG-20260513-WA0013.jpg" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+			
+			 <!-- Image 1 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000b71471f8a7284def51dcf65d.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 2 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000f374720b9d1e648d3e3c319b.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 3 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="ile_000000007c887206a8be5ab34ca651df.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 4 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_000000007cac71fdba2ca66760c7eb03.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			 <!-- Image 5 - Wedding -->
+            <div class="item wedding overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_000000007c887206a8be5ab34ca651df.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+			
+			  <!-- Image 1 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src=".trashed-1785165398-file_00000000da6c72089aa75a2e83c0cb4d.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 2 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src=".trashed-1785165398-file_00000000e5fc7208a39d2809c081d4c5.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 3 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="engaged.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 4 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src=".trashed-1785165398-Gemini_Generated_Image_111fp4111fp4111f.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 5 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="kmc_20241214_100445.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 6 - other -->
+            <div class="item other overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="IMG-20260829-WA0001.jpg" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+			<!-- Image 1- mandap -->
+            <div class="item mandap overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src=".trashed-1785165398-file_00000000d71871f88a4608eb5f95d789.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 2- mandap -->
+            <div class="item mandap overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000aebc7209941eaddcc4a78d16.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			<!-- Image 3- mandap -->
+            <div class="item mandap overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000ed5071fda9668215ecf21cd2.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Grand Stage Decor">
+            </div>
+			
+			
+			
+			 <!-- Image 1 - Haldi -->
+            <div class="item haldi overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_00000000bb5071faa985a1bf061b1e55.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Traditional Yellow Haldi Theme">
+            </div>
+			 <!-- Image 2 - Haldi -->
+            <div class="item haldi overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_000000001a9c71fa8a3dec06b0f94a6f.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Traditional Yellow Haldi Theme">
+            </div>
+			 <!-- Image 3 - Haldi -->
+            <div class="item haldi overflow-hidden rounded shadow-sm border border-gray-100 bg-white cursor-pointer" onclick="openLightbox(this)">
+                <img src="file_000000007828720b80835a0017514890.png" class="w-full h-auto object-cover hover:scale-105 transition duration-500" alt="Traditional Yellow Haldi Theme">
+            </div>
+			
+    </section>
+
+    <!-- ========================================== -->
+    <!-- LUXURY LIGHTBOX POPUP WINDOW -->
+    <!-- ========================================== -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4">
+        <!-- Close Button (Top Right) -->
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl font-light hover:text-amber-400 cursor-pointer transition">&times;</button>
+        
+        <!-- Big Preview Image -->
+        <div class="max-w-4xl max-h-[75vh] overflow-hidden flex justify-center items-center mb-6">
+            <img id="lightbox-img" src="" class="max-w-full max-h-[75vh] object-contain rounded-sm" alt="Preview">
+        </div>
+
+        <!-- Download Button Utility -->
+        <a id="lightbox-download" href="" download="Yaseen-Ed-Design.jpg" target="_blank" class="bg-[#B59410] hover:bg-[#94780D] text-white px-6 py-3 rounded text-xs uppercase tracking-widest font-bold shadow-md transition flex items-center gap-2">
+            ⬇️ Download This Design
+        </a>
+    </div>
+
+    <!-- Interactive Logic JavaScript -->
+    <script>
+        // 1. FILTER FUNCTION WITH ACTIVE BUTTON STATE
+        function filterGallery(category, buttonElement) {
+            // Saare items ko filter karein
+            const items = document.querySelectorAll('.item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Buttons ke styling state ko manage karein
+            document.querySelectorAll('.gallery-btn').forEach(btn => {
+                btn.classList.remove('bg-[#B59410]', 'text-white');
+                btn.classList.add('bg-white', 'border', 'border-gray-200');
+            });
+            buttonElement.classList.remove('bg-white', 'border', 'border-gray-200');
+            buttonElement.classList.add('bg-[#B59410]', 'text-white');
+        }
+
+        // 2. OPEN POPUP WINDOW (TOUCH EVENT)
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxDownload = document.getElementById('lightbox-download');
+
+            // Set source
+            lightboxImg.src = imgSrc;
+            lightboxDownload.href = imgSrc; // Image url hi link banega taaki download ho sake
+
+            // Unhide modal window
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Background scroll stop karne ke liye
+        }
+
+        // 3. CLOSE POPUP WINDOW
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Scroll vapas normal karne ke liye
+        }
+    </script>
+
+</body>
+</html>
